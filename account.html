@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Shop.css">
+        <script src="Shop.js"></script>
+        <script src="https://kit.fontawesome.com/224caa2a9a.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/224caa2a9a.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <title>
+            Luigi's Store Home
+        </title>
+        <link rel="icon" type="image/x-icon" href="shopIconL.ico">
+    </head>
+    <body>
+        <div class="section">
+            <div class="logo">
+                <a href="Shop.html">
+                    <button><img src="finalLogo.png" width="70px" height="80px"></img><br>Luigi's Trusted Online Shop</button>
+                </a> 
+            </div>
+            <div class="cartIcon">
+                <a href="cart.html">
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                </a>
+            </div>
+            <div class="signUp">
+                <a href="signup.html">
+                    <button>Sign-Up</button>
+                </a>
+            </div>
+            <!--<div class="slash">
+                <p>/</p>
+            </div>-->
+            <div class="signIn">
+                <a href="signin.html">
+                    <button>Log-In</button>
+                </a>
+            </div>
+            <div class="accountIcon">
+                <a href="account.html">
+                    <button>
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="sectionTitle">
+            <a href="Shop.html">
+                <button><h2>Account</h2></button>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="mainMenu">
+                <li><a href="#">Products</a>
+                    <ul class="subMenu">
+                        <li><a href="books.html"><i class="fa-solid fa-book"></i>&emsp;Books</a></li>
+                        <li><a href="movies.html"><i class="fa-solid fa-film"></i>&emsp;Movies</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a>
+                    <ul class="subMenu">
+                        <li><a href="howToOrder.html"><i class="fa-solid fa-basket-shopping"></i>&emsp;How to Order</a></li>
+                        <li><a href="howToReceive.html"><i class="fa-solid fa-truck-pickup"></i>&emsp;How to Pick Up / Receive</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Doubts</a></button>
+                    <ul class="subMenu">
+                        <li><a href="contactUs.html"><i class="fa-solid fa-envelope"></i>&emsp;Contact Us</a></li>
+                        <li><a href="helpCenter.html"><i class="fa-solid fa-circle-question"></i>&emsp;Help Center (FAQ)</a></li>
+                    </ul>
+                </li>
+                <li><a href="termsAndConditions.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="accountWelcome">
+            <h1>
+                Welcome Back! 
+            </h1>
+        </div>
+        <div class="pastPurchases">
+            <div class="pastPurchasesTitle">
+                Latest Purchases
+            </div>
+            <ul class="pastPurchasesList">
+                <li class="pastPurchase">
+                    <img src="topgunmaverickita.jpg" width="150" height="250">
+                    <div class="pastPurchaseInfo">
+                        <h1>
+                            Top Gun Maverick (Italian)
+                        </h1>
+                        <p>
+                            Bought on 06/01/2024. 
+                        </p>
+                    </div>
+                </li>
+                <li class="pastPurchase">
+                    <img src="geronimoStiltonViaggioTempoUno.jpeg" width="183.5" height="250">
+                    <div class="pastPurchaseInfo">
+                        <h1>
+                            Geronimo Stilton First Journey Through Time (Italian)
+                        </h1>
+                        <p>
+                            Bought on 31/12/2023. 
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="registerNumber">
+            <h1>
+                Register a Phone Number
+            </h1>
+            <input type="tel" id="phoneNumber" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter Your Phone Number">
+            <div class="submitNumber">
+                <button>
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

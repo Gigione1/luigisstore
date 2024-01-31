@@ -1,0 +1,398 @@
+.section {
+    height:17%;
+    width: 100%;
+    text-align: center;
+}
+.section:nth-child(1) {
+    background-color:#00008a;
+}
+h1, h2 {
+        margin: 0;
+        padding: 0;
+    }
+.menu {
+    background-color: #0f449f;
+    width: 100%;
+    height: 5vh;
+    display: block;
+}
+.mainMenu {
+    list-style: none;
+    padding-bottom: 5px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #0f449f;
+}
+.mainMenu li {
+    position: relative;
+}
+.mainMenu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+.mainMenu a:hover {
+    background-color: #003391;
+}
+.subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #0f449f;
+    text-align: left;
+}
+.mainMenu li:hover .subMenu {
+    display: block;
+}
+.subMenu li {
+    white-space: nowrap;
+}
+.subMenu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+.subMenu a:hover {
+    background-color: #003391;
+}
+.books ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    text-align: center;
+  }
+  .productBook h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+  }
+  .books ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+  }
+  .sectionTitle {
+    width: 100%;
+    text-align: center;
+    background-color: #0f449f;
+    padding-top: 0.5%;
+    height: 5%;
+  }
+  .searchBar {
+    width: 100%;
+    height: 10vh;
+    background-color: #0f449f;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    padding: 0;
+  }
+  .searchBar form {
+    width: 95%;
+    border: 1px solid color(black);
+    background-color: white;
+    border-radius: 4px;
+  }
+.searchBar form input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 95%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px;
+}
+.searchBar form i {
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.movies ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    text-align: center;
+  }
+  
+.movies ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+}
+.booksList li button{
+    background-color: white;
+}
+.booksList li button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+.productImage {
+    text-align: left;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    vertical-align: middle;
+}
+.productInfo {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productInfo h3 {
+    font-weight: 200;
+}
+.itemName {
+    text-align: center;
+    margin-top: 1%;
+}
+.itemName h2 {
+    color: rgb(99, 99, 99);
+}
+.addToCart {
+    background-color: #0f449f;
+    color: white;
+    border-radius: 25px;
+    padding: 5%;
+    font-size: 100%;
+}
+.addToCart:hover {
+    cursor: pointer;
+    background-color: #00008a;
+}
+.section a button:hover {
+    cursor: pointer;
+}
+.ratings {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    width:300px;
+    margin-bottom: 2%;
+}
+.ratings h3 {
+    width: 294px;
+    color: #0f449f;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+.ratings div {
+    color: #0f4fbd;
+}
+.ratings input {
+    display: none;
+}
+.ratings input + label {
+    font-size: 50px;
+    text-shadow: 1px 1px 0 black;
+    cursor: pointer;
+}
+.ratings input:checked + label ~ label {
+    color: rgb(112, 152, 226);
+}
+.ratings label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+.comments {
+    margin-bottom: 2%;
+    font-family: 'poppins', sans-serif;
+    font-size: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: rgb(55, 90, 184);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.commentForm input, .commentForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0; 
+    box-sizing:border-box;
+    outline: none; 
+    font-size: 18px; 
+    font-family: 'poppins', sans-serif;
+    border: 1px solid #ddd; 
+    color: rgb(80, 132, 206);
+}
+.commentForm button {
+    background-color: rgb(27, 61, 154);
+    margin: 10px 0;
+    border: none;
+    padding: 10px;
+    color: white; 
+}
+.commentForm button:hover {
+    cursor: pointer;
+    background-color: #4164b0;
+}
+.section button {
+    font-size:xx-large; 
+    font-family:'Times New Roman', Times, serif; 
+    color: whitesmoke; 
+    background-color: #00008a; 
+    border: none;
+}
+.sectionTitle button {
+    border: none;
+    background-color: #0f449f;
+    font-family:'Times New Roman', Times, serif;
+}
+.sectionTitle button h2 {
+    font-size: x-large; 
+    color:whitesmoke;
+}
+.sectionTitle button:hover{
+    cursor: pointer;
+}
+.productBook a button {
+    border: none;
+}
+.contactDetails {
+    margin-bottom: 2%;
+    font-family: 'poppins', sans-serif;
+    font-size: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: rgb(55, 90, 184);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0; 
+    box-sizing:border-box;
+    outline: none; 
+    font-size: 18px; 
+    font-family: 'poppins', sans-serif;
+    border: 1px solid #ddd; 
+    color: rgb(80, 132, 206);
+}
+.contactForm button {
+    background-color: rgb(27, 61, 154);
+    margin: 10px 0;
+    border: none;
+    padding: 10px;
+    color: white; 
+}
+.contactForm button:hover {
+    cursor: pointer;
+    background-color: #4164b0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.contactForm a {
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgb(27, 61, 154);
+    margin: 10px 0;
+    border: none;
+    padding: 10px;
+    color: white; 
+    border-radius: 25px;
+    transition: transform 0.3s;
+}
+.contactForm a:hover {
+    transform: scale(1.15);
+}
+.subMenu {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+.description {
+    padding: 0;
+}
+.description p, h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* .leaves img {
+    width: 50px;
+    animation: leaf 7s linear infinite;
+}
+.leaves {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -50px;
+}
+@keyframes leaf{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(80vh);
+        opacity: 0;
+    }
+}
+.leaves img:nth-child(1) {
+    animation-delay: 2s;
+    width: 40px;
+}
+.leaves img:nth-child(2) {
+    animation-delay: 1s;
+}
+.leaves img:nth-child(3) {
+    animation-delay: 3s;
+    width: 40px;
+}
+.leaves img:nth-child(4) {
+    animation-delay: 4.5s;
+}
+.leaves img:nth-child(5) {
+    animation-delay: 3s;
+}
+.leaves img:nth-child(6) {
+    animation-delay: 6s;
+    width: 30px;
+}
+.leaves img:nth-child(7) {
+    animation-delay: 7s;
+    width: 60px;
+}
+.saveForLater{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    position: relative;
+}
+.saveForLater::before {
+    content: "Books";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: white; 
+    transition: 1s ease-in-out;
+}
+.saveForLater:hover::before {
+    width: 100%;
+}
+.noLeaves {
+    position: relative;
+} */

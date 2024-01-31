@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Shop.css">
+        <script src="Shop.js"></script>
+        <script src="https://kit.fontawesome.com/224caa2a9a.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/224caa2a9a.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <title>
+            Luigi's Store Home
+        </title>
+        <link rel="icon" type="image/x-icon" href="shopIconL.ico">
+    </head>
+    <body>
+        <div class="section">
+            <div class="logo">
+                <a href="Shop.html">
+                    <button><img src="finalLogo.png" width="70px" height="80px"></img><br>Luigi's Trusted Online Shop</button>
+                </a> 
+            </div>
+            <div class="cartIcon">
+                <a href="cart.html">
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                </a>
+            </div>
+            <div class="signUp">
+                <a href="signup.html">
+                    <button>Sign-Up</button>
+                </a>
+            </div>
+            <!--<div class="slash">
+                <p>/</p>
+            </div>-->
+            <div class="signIn">
+                <a href="signin.html">
+                    <button>Log-In</button>
+                </a>
+            </div>
+            <div class="accountIcon">
+                <a href="account.html">
+                    <button>
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="sectionTitle">
+            <a href="Shop.html">
+                <button><h2>Home Page</h2></button>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="mainMenu">
+                <li><a href="#">Products</a>
+                    <ul class="subMenu">
+                        <li><a href="books.html"><i class="fa-solid fa-book"></i>&emsp;Books</a></li>
+                        <li><a href="movies.html"><i class="fa-solid fa-film"></i>&emsp;Movies</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a>
+                    <ul class="subMenu">
+                        <li><a href="howToOrder.html"><i class="fa-solid fa-basket-shopping"></i>&emsp;How to Order</a></li>
+                        <li><a href="howToReceive.html"><i class="fa-solid fa-truck-pickup"></i>&emsp;How to Pick Up / Receive</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Doubts</a></button>
+                    <ul class="subMenu">
+                        <li><a href="contactUs.html"><i class="fa-solid fa-envelope"></i>&emsp;Contact Us</a></li>
+                        <li><a href="helpCenter.html"><i class="fa-solid fa-circle-question"></i>&emsp;Help Center (FAQ)</a></li>
+                    </ul>
+                </li>
+                <li><a href="termsAndConditions.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="itemName">
+            <h1>
+                Up (Italian)
+            </h1>
+            <h2>
+                Up
+            </h2>
+        </div>
+        <div class="productImage"><img src="upita.jpg" alt="Up (Italian)" height="500" width="300" class="topGunMavIta"></div><span class="productInfo"><a href="#"><button class="addToCart">Add To Cart</button></a><h2><br>Price: 90dhs</h2><h3><b>Author:</b> Antoine de Saint-Exupéry<br><b>Illustrator:</b> Antoine de Saint-Exupéry<br><b>Date Published:</b> 6 April 1943<br><b>Date Published in Italy:</b> 1949<br><b>Genre:</b> Literature for Teens, Fairytale, Novel, Speculative Fiction<br><b>Original Language:</b> French<br><b>Main Characters: </b>The Little Prince, The Fox<br><b>Age Rating: </b><br><b>Blurb:</b><br>&emsp;Here goes the blurb.</h3></span>
+        <div class="ratings">
+            <h3>
+                Leave a Review!
+            </h3>
+            <div class="starIcon">
+                <input type="radio" name="rating1" id="rating1">
+                <label for="rating1" class="fa fa-star"></label>
+                <input type="radio" name="rating1" id="rating2">
+                <label for="rating2" class="fa fa-star"></label>
+                <input type="radio" name="rating1" id="rating3">
+                <label for="rating3" class="fa fa-star"></label>
+                <input type="radio" name="rating1" id="rating4">
+                <label for="rating4" class="fa fa-star"></label>
+                <input type="radio" name="rating1" id="rating5">
+                <label for="rating5" class="fa fa-star"></label>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head"><h1>Post A Comment</h1></div>
+            <div><span id="comment">0</span> Comments</div>
+            <div class="text"><p>We are happy to hear from you!</p></div>
+            <div class="comments"></div>
+            <div class="commentBox">
+                <div class="content">
+                    <h2>Comment As: </h2>
+                    <input type="text" value="Anonymous" class="user">
+
+                    <div class="commentInput">
+                        <input type="text" placeholder="Enter Comment" class="userComment">
+                        <div class="buttons">
+                            <button type="submit" disabled id="publish">Publish</button>
+                            <div class="notify">
+                                <input type="checkbox" class="notifyInput"> <span>Notify Me</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    "use strict";
+
+    const userId = {
+        name: null,
+        identity: null,
+        image: null,
+        message: null,
+        date: null
+    }
+
+    const userComment = document.querySelector(".userComment");
+    const publishBtn = document.querySelector("#publish");
+    const comments = document.querySelector(".comments");
+    const userName = document.querySelector(".user");
+
+    userComment.addEventListener("input", e => {
+        if(!userComment.value) {
+            publishBtn.setAttribute("disabled", "disabled");
+            publishBtn.classList.remove("abled")
+        }else {
+            publishBtn.removeAttribute("disabled");
+            publishBtn.classList.add("abled")
+        }
+    })
+
+    function addPost() {
+        console.log("The button works!")
+        if(!userComment.value) return;
+        userId.name = userName.value;
+        if(userId.name === "Anonymous") {
+            userId.identity = false;
+            userId.image = "#"
+        }
+
+        userId.message = userComment.value;
+        userId.date = new Date().toLocaleString();
+        let published = 
+        `<div class="parents">
+            <img src="$(userID.image)">
+            <div>
+                <h1>${userId.name}</h1>
+                <p>${userId.message}</p>
+                <div class="engagements"><img src="like.png"><img src="share.png"></div>
+                <span class="date">${userId.date}</span>
+            </div>
+        </div>`;
+
+        comments.innerHTML += published;
+        userComment.value = "";
+
+        let commentsNum = document.querySelectorAll(".parents").length;
+        document.getElementById("comments").textContent = commentsNum;
+    }
+
+    publishBtn.addEventListener("click", addPost)
+});
+        </script>
+    </body>
+</html>
